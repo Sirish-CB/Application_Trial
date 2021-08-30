@@ -9,7 +9,7 @@ namespace Application_Trial.Models
 {
     public class StoryDataAccessLayer
     {
-        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\siris\Documents\Projects\Application_Trial\App_Data\Application_Trial.mdf;Integrated Security=True";
+        string connectionString = "Enter DB Connection String";
 
         // To view all Stories
         public IEnumerable<Story> GetAllStories()
