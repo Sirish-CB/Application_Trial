@@ -1,0 +1,66 @@
+﻿@model Application_Trial.Models.Taski
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Taski</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

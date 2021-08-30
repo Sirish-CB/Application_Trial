@@ -1,0 +1,42 @@
+﻿
+@model IEnumerable<Application_Trial.Models.Taski>
+@foreach (var item in Model)
+{
+    <div>
+        <h4>Task</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TaskID)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => item.TaskID)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.StoryID)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => item.StoryID)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TaskName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => item.TaskName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TaskStatus)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => item.TaskStatus)
+            </dd>
+
+        </dl>
+
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> |
+        <a asp-action="Details" asp-route-id="@item.TaskID">Details</a> |
+        <a asp-action="Delete" asp-route-id="@item.TaskID">Delete</a>
+    </div>
+}

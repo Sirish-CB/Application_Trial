@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Application_Trial.Models.Taski>
+
+@{
+    ViewBag.Title = "ScrumMain";
+}
+
+<h2>Scrum Board</h2>
+<p>    
+    <h3>Stories</h3>
+    <a asp-action="Create">Add+</a>
+ </p>
+<p>
+    <h3>Tasks</h3>
+    <a asp-action="CreateTask">Add+</a>
+</p>
+<table class="Scrumtable">
+    <thead>
+        <tr>
+            <th>
+                @Html.Display("Stories")
+            </th>
+            <th>
+                @Html.Display("Not Started")
+            </th>
+            <th>
+                @Html.Display("In Progress")
+            </th>
+            <th>
+                @Html.Display("Completed")
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tc>
+            @{Html.RenderPartial("Stories"); }
+        </tc>
+        <tc>
+            @{Html.RenderPartial("NotStarted"); }
+        </tc>
+        <tc>
+            @{Html.RenderPartial("InProgress"); }
+        </tc>
+        <tc>
+            @{Html.RenderPartial("Completed"); }
+        </tc>
+
+    </tbody>
+</table>
+
